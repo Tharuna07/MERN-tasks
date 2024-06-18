@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task2css</title>
+    <style>
+      .navbar {
+        background-color: lightblue;
+        position: absolute;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: 3px solid white;
+        border: 1px solid black;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+      #item {
+        width: 150px;
+        font-size: 20px;
+        padding-left: 20px;
+      }
+      #item:hover {
+        background-color: orange;
+      }
+      #ver {
+        max-width: max-content;
+        display: inline;
+      }
+      #hor {
+        max-width: max-content;
+      }
+      .h-navbar {
+        display: flex;
+        margin-top: 30px;
+        justify-content: space-between;
+        width: 250px;
+        border: 1px solid black;
+        background-color: lightgrey;
+        color: blue;
+        height: 30px;
+      }
+      #h-item:hover {
+        background-color: grey;
+        width: 50px;
+        height: 30px;
+        padding: 0px;
+      }
+      #h-item {
+        border-right: 1px solid black;
+        padding: 5px;
+      }
+      .ver-div {
+        margin-top: 20px;
+        border: 1px solid black;
+        width: 190px;
+        height: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <h4 id="ver">Vertical Navigation Bar</h4>
+    <br />
+    <div class="ver-div">
+      <div class="navbar">
+        <div id="item">Home</div>
+        <div id="item">Java</div>
+        <div id="item">CSS</div>
+        <div id="item">HTML</div>
+        <div id="item">Bootstrap</div>
+      </div>
+    </div>
+
+    <h4 id="hor">Horizontal Navigation Bar</h4>
+    <nav class="h-navbar">
+      <div id="h-item">Home</div>
+      <div id="h-item">Java</div>
+      <div id="h-item">CSS</div>
+      <div id="h-item">HTML</div>
+    </nav>
+  </body>
+</html>
