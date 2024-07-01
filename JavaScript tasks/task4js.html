@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .div {
+        width: 400px;
+        height: 200px;
+        border: 1px solid black;
+        margin: auto;
+        margin-top: 80px;
+        padding: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div">
+      <button id="btn-1">show date</button>
+      <p id="first-p"></p>
+      <br />
+      <br />
+      <button id="btn-2">show time</button>
+      <p id="sec-p"></p>
+    </div>
+
+    <script>
+      let formattedDate;
+      let time;
+      function showDate() {
+        let date = new Date();
+        let day = date.getDate();
+        let month = date.toLocaleString("default", { month: "long" });
+        let year = date.getFullYear();
+        formattedDate = day + "/" + month + "/" + year;
+      }
+      function showTime() {
+        time = new Date();
+      }
+      document.getElementById("btn-1").onclick = function () {
+        showDate();
+        document.getElementById("first-p").textContent = `${formattedDate}`;
+      };
+      document.getElementById("btn-2").onclick = function () {
+        showTime();
+        document.getElementById("sec-p").textContent = `${time}`;
+      };
+    </script>
+  </body>
+</html>

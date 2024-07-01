@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .div1 {
+        width: 300px;
+        height: 200px;
+        margin: auto;
+        border: 1px solid black;
+        padding: 50px;
+        margin-top: 100px;
+      }
+      button {
+        margin-top: 20px;
+        margin-right: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1">
+      <label for="lb1">1st Number: </label>
+      <input type="text" id="lb1" /> <br />
+      <br />
+      <label for="lb2">2nd Number: </label>
+      <input type="text" id="lb2" /> <br />
+      <button id="btn1">Multiply</button>
+      <button id="btn2">Divide</button>
+      <br />
+      <br />
+      <h2 id="firsth1"></h2>
+    </div>
+
+    <script>
+      function multiply() {
+        let a = Number(document.getElementById("lb1").value);
+        let b = Number(document.getElementById("lb2").value);
+        let c = a * b;
+        document.getElementById("firsth1").textContent = `The result is ${c}`;
+      }
+      function divide() {
+        let a = Number(document.getElementById("lb1").value);
+        let b = Number(document.getElementById("lb2").value);
+        let c = a / b;
+        document.getElementById("firsth1").textContent = `The result is ${c}`;
+      }
+
+      document.getElementById("btn1").onclick = function () {
+        multiply();
+      };
+      document.getElementById("btn2").onclick = function () {
+        divide();
+      };
+    </script>
+  </body>
+</html>

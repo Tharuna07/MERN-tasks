@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .div {
+        margin-top: 20px;
+        width: 1000px;
+        height: 1000px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div">
+      <form action="#" onsubmit="validate()">
+        <table>
+          <tr>
+            <td><label for="name">Name</label></td>
+            <td>:</td>
+            <td><input type="text" id="name" /></td>
+            <td><div id="nameFeedback"></div></td>
+          </tr>
+          <tr>
+            <td><label for="mail">E-mail</label></td>
+            <td>:</td>
+            <td><input type="email" name="" id="mail" /></td>
+            <td><div id="mailFeedback"></div></td>
+          </tr>
+          <tr>
+            <td><label for="website">Website</label></td>
+            <td>:</td>
+            <td>
+              <input type="url" name="" id="website" />
+            </td>
+            <td><div id="websiteFeedback"></div></td>
+          </tr>
+          <tr>
+            <td><label for="message">Message</label></td>
+            <td>:</td>
+            <td>
+              <textarea name="" id="message" cols="30" rows="10"></textarea>
+            </td>
+            <td><div id="messageFeedback"></div></td>
+          </tr>
+          <tr>
+            <td colspan="3" class="text-center">
+              <input type="submit" value="submit" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+    <script>
+      function validate() {
+        validName();
+        validMail();
+        validUrl();
+        validMessage();
+      }
+      function validName() {
+        var x = document.getElementById("name").value;
+        document.getElementById("nameFeedback").style.color = "red";
+        document.getElementById("name").style.borderColor = "rgb(5, 205, 5)";
+        document.getElementById("name").style.borderWidth = "2px";
+        if (x.length === 0) {
+          document.getElementById("name").style.borderColor = "red";
+          document.getElementById("nameFeedback").innerText =
+            "This field is required";
+        } else {
+          document.getElementById("nameFeedback").innerText = "";
+        }
+      }
+      function validMail() {
+        var x = document.getElementById("mail").value;
+        document.getElementById("mail").style.borderColor = "rgb(5, 205, 5)";
+        document.getElementById("mail").style.borderWidth = "2px";
+        document.getElementById("mailFeedback").style.color = "red";
+        if (x.length === 0) {
+          document.getElementById("mail").style.borderColor = "red";
+          document.getElementById("mailFeedback").innerText =
+            "A valid email address is required";
+        } else {
+          document.getElementById("mailFeedback").innerText = "";
+        }
+      }
+      function validUrl() {
+        var x = document.getElementById("website").value;
+        document.getElementById("website").style.borderColor = "rgb(5, 205, 5)";
+        document.getElementById("website").style.borderWidth = "2px";
+        document.getElementById("websiteFeedback").style.color = "red";
+        if (x.length === 0) {
+          document.getElementById("website").style.borderColor = "red";
+          document.getElementById("websiteFeedback").innerText =
+            "A valid url is required";
+        } else {
+          document.getElementById("websiteFeedback").innerText = "";
+        }
+      }
+      function validMessage() {
+        var x = document.getElementById("message").value;
+        document.getElementById("messageFeedback").style.color = "red";
+        document.getElementById("message").style.borderColor = "rgb(5, 205, 5)";
+        document.getElementById("message").style.borderWidth = "2px";
+        if (x.length === 0) {
+          document.getElementById("message").style.borderColor = "red";
+          document.getElementById("messageFeedback").innerText =
+            "This field is required";
+        } else {
+          document.getElementById("messageFeedback").innerText = "";
+        }
+      }
+    </script>
+  </body>
+</html>
